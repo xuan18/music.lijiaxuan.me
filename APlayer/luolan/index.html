@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="format-detection" content="telephone=no">
+<script type="text/javascript">
+//原来是在微信易信执行Ready之前，先注册事件，所以放在所有请求的最前面
+document.addEventListener("WeixinJSBridgeReady", function () {
+    audioAutoPlay('Jaudio');//给个全局函数
+}, false);
+document.addEventListener('YixinJSBridgeReady', function() {
+    audioAutoPlay('Jaudio');//给个全局函数
+}, false);
+
+</script><!-- 加载css放这里 -->
+<style type="text/css">
+	img{
+        height: 100%;
+        /*margin:auto;*/
+        margin-left:auto;margin-right:auto;
+        display:block;
+        box-shadow: 0 0 11px 0px black;
+</style>
+<title></title>
+<link href="/bitbug_favicon.ico" rel="shortcut icon" />
+<link href="phone.css" media="screen and (max-device-width:800px)" rel="stylesheet" type="text/css" />
+<link href="computer.css" media="screen and (min-device-width:400px) and (max-device-width:3000px)" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body style="margin-top:0px; margin-bottom:0px; ">
+
+<script>
+function audioAutoPlay(id){//全局控制播放函数
+    var audio = document.getElementById(id),
+        play = function(){
+            audio.play();
+            document.removeEventListener("touchstart",play, false);
+        };
+    audio.play();
+    document.addEventListener("touchstart",play, false);
+}
+var isAppInside=/micromessenger/i.test(navigator.userAgent.toLowerCase())||/yixin/i.test(navigator.userAgent.toLowerCase());
+if(!isAppInside){//给非微信易信浏览器
+  audioAutoPlay();
+}
+</script>
+
+<div>
+<a>首页</a>
+</div>
+
+<img id="pic-1" src="http://www.lijiaxuan.me/wp-content/uploads/2018/02/1408604212_1436653066_31675_upload.jpg" />
+<!--<img id="pic-2" src="http://www.lijiaxuan.me/wp-content/uploads/2018/02/1408592282_1436653066_8479_upload.jpg" />
+<img id="pic-3" src="http://www.lijiaxuan.me/wp-content/uploads/2018/02/1408604212_1436653066_31675_upload.jpg" />-->
+<div id="out"></div>
+
+<audio class="media-audio" controls="controls" id="Jaudio" preload="auto" src="http://www.lijiaxuan.me/wp-content/uploads/2018/01/βίος＜MKnZk-Version＞.mp3" style="display:block; margin-left:auto; margin-right:auto; ">Your browser does not support the audio element.</audio>
+
+<p>
+<script>
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+    }, false);
+}
+audioAutoPlay('Jaudio');
+ </script></p>
+
+
+<!--movie
+<script>
+        var x=screen.availWidth;
+        if(x>1040)
+        {
+	    //alert(x);
+	    /*function init()
+        {
+            var myScript= document.createElement("script");
+            myScript.type = "text/javascript";
+            myScript.src="computer.js";
+            document.body.appendChild(myScript);
+            //如果马上使用会找不到，因为还没有加载进来
+            //functionOne();
+        }
+        function operation()
+        {
+            //可以运行，显示“成功加载”
+            //.delay('2000')
+            functionOne();
+        };*/
+        function functionOne()
+        {
+            //alert("成功加载 computer.js");
+            a = $("div.aplayer-pic").animate({width:"0%"});
+            var t=setTimeout('$("div.aplayer-pic").animate({width:"36%"});',2000)
+            //$("div.aplayer-pic").animate({width:"36%"});
+        }
+
+        functionOne();
+        }
+    	else
+    	{
+    	//alert(x);
+	    /*function init()
+        {
+            var myScript= document.createElement("script");
+            myScript.type = "text/javascript";
+            myScript.src="phone.js";
+            document.body.appendChild(myScript);
+            //如果马上使用会找不到，因为还没有加载进来
+            //functionOne();
+        }
+        function operation()
+        {
+            //可以运行，显示“成功加载”
+            //.delay('2000')
+            functionOne();
+        };*/
+        function functionOne(){
+            //alert("成功加载 phone.js");
+            $("div.aplayer-pic").animate({width:"0%"});
+            var t=setTimeout('$("div.aplayer-pic").animate({width:"83%"});',2000)
+        }
+
+        functionOne();
+    	}
+</script>-->
+<script>
+        function functionTwo()
+        {
+            a = $("#pic-1").animate({width:"0%",});
+            b = $("#pic-1").animate({width:"36%"});
+            //var t=setTimeout('$("#pic-1").animate({width:"0%"});',2000)
+            $("#pic-1").attr("src","http://www.lijiaxuan.me/wp-content/uploads/2018/02/1408592282_1436653066_8479_upload.jpg");
+            d = $("#pic-2").animate({width:"0%"});
+            f = $("#pic-2").animate({width:"36%"});
+            g = $("#pic-2").animate({width:"0%"});
+            h = $("#pic-3").animate({width:"0%"});
+            i = $("#pic-3").animate({width:"36%"});
+            j = $("#pic-3").animate({width:"0%"});
+        }
+        functionTwo();
+</script>
+
+</body>
+</html>

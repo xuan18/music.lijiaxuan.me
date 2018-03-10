@@ -1,0 +1,32 @@
+/*use in computer(width:400~3000px)*/
+
+.aplayer .aplayer-pic{
+	width:36% !important;
+}
+
+#pic-1,#pic-2,#pic-3{
+		    height:100%;
+            width:100%;
+			background-position: center top;
+			background-repeat: no-repeat;
+			background-size: cover;
+}
+/*
+#pic-1{
+            background-image:url("http://www.lijiaxuan.me/wp-content/uploads/2018/02/1408592237_1436653066_7209_upload.jpg");
+}
+#pic-2{
+            background-image:url("http://www.lijiaxuan.me/wp-content/uploads/2018/02/1408592282_1436653066_8479_upload.jpg");
+}
+#pic-3{
+            background-image:url("http://www.lijiaxuan.me/wp-content/uploads/2018/02/1408604212_1436653066_31675_upload.jpg");
+}*/
+
+#out{
+    background-image:url("http://www.lijiaxuan.me/wp-content/uploads/2018/02/Zilius_Blood_Rage-e1517905343178.png");
+        float: right;
+    width: 700px;
+    height: 100%;
+    background-repeat: no-repeat;
+    margin-top: -311px;
+}

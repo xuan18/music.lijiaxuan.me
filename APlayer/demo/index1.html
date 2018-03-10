@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="phone.css" media="screen and (max-device-width:1039px)" rel="stylesheet" type="text/css" />
+	<link href="computer.css" media="screen and (min-device-width:1040px) and (max-device-width:3000px)" rel="stylesheet" type="text/css" />
+	<link href="computer.js" media="screen and (min-device-width:1040px) and (max-device-width:3000px)"  type="text/javascript" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            setTimeout(init(),5000);
+            //setTimeout(operation(),5000);
+    	    $('#bgimg')
+                .delay('2000')
+                .queue(function (next) { 
+                $(this).css({"background-image":"url('http://www.lijiaxuan.me/wp-content/uploads/2018/01/124935.47765258_502-1.jpg')"});
+                next(); 
+                });
+            
+	    });
+    </script>
+    
+</head>
+
+<body id="bgimg">
+    <div id="player2" class="aplayer"></div>
+    
+        <script>
+        var x=screen.availWidth;
+        if(x>1040)
+        {
+	    //alert(x);
+	    function init()
+        {
+            var myScript= document.createElement("script");
+            myScript.type = "text/javascript";
+            myScript.src="computer.js";
+            document.body.appendChild(myScript);
+            //如果马上使用会找不到，因为还没有加载进来
+            //functionOne();
+        }
+        function operation()
+        {
+            //可以运行，显示“成功加载”
+            functionOne();
+        };
+        }
+    	else
+    	{
+    	//alert(x);
+	    function init()
+        {
+            var myScript= document.createElement("script");
+            myScript.type = "text/javascript";
+            myScript.src="phone.js";
+            document.body.appendChild(myScript);
+            //如果马上使用会找不到，因为还没有加载进来
+            //functionOne();
+        }
+        function operation()
+        {
+            //可以运行，显示“成功加载”
+            functionOne();
+        };
+    	}
+    </script>
+    
+    <script src="APlayer.min.js"></script>
+    <script src="demo.js"></script>
+</body>
+
+</html>
